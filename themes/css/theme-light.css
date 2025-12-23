@@ -1,0 +1,41 @@
+/* Auto-generated from tokens.json */
+/* Light Theme */
+
+:root,
+[data-theme="light"] {
+  /* Background Colors */
+  --color-bg-default: var(--color-stone-50);
+  --color-bg-surface: var(--color-white);
+  --color-bg-elevated: var(--color-white);
+  --color-bg-subtle: var(--color-stone-100);
+  --color-bg-muted: var(--color-stone-200);
+
+  /* Text Colors */
+  --color-text-primary: var(--color-stone-900);
+  --color-text-secondary: var(--color-stone-600);
+  --color-text-muted: var(--color-stone-400);
+  --color-text-inverse: var(--color-white);
+
+  /* Border Colors */
+  --color-border-default: var(--color-stone-200);
+  --color-border-subtle: var(--color-stone-100);
+  --color-border-strong: var(--color-stone-400);
+
+  /* Intent Colors */
+  --color-intent-primary: var(--color-indigo-600);
+  --color-intent-primary-hover: var(--color-indigo-700);
+  --color-intent-primary-bg: var(--color-indigo-50);
+  --color-intent-success: var(--color-emerald-600);
+  --color-intent-success-bg: #ecfdf5;
+  --color-intent-warning: var(--color-amber-600);
+  --color-intent-warning-bg: #fffbeb;
+  --color-intent-danger: var(--color-rose-600);
+  --color-intent-danger-hover: var(--color-rose-700);
+  --color-intent-danger-bg: #fff1f2;
+
+  /* Focus Ring */
+  --focus-ring: 0 0 0 2px var(--color-bg-surface), 0 0 0 4px var(--color-intent-primary);
+
+  color-scheme: light;
+}
+

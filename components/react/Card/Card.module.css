@@ -1,0 +1,59 @@
+.card {
+  background-color: var(--color-bg-surface);
+  border: 1px solid var(--color-border-default);
+  border-radius: var(--card-radius);
+}
+
+.elevated {
+  border-color: transparent;
+  box-shadow: var(--shadow-md);
+}
+
+/* Padding Variants */
+.padding-none {
+  padding: 0;
+}
+
+.padding-sm {
+  padding: var(--space-3);
+}
+
+.padding-md {
+  padding: var(--card-padding);
+}
+
+.padding-lg {
+  padding: var(--space-6);
+}
+
+/* Subcomponents */
+.header {
+  padding: var(--card-padding);
+  border-bottom: 1px solid var(--color-border-subtle);
+}
+
+.header:first-child {
+  border-top-left-radius: var(--card-radius);
+  border-top-right-radius: var(--card-radius);
+}
+
+.content {
+  padding: var(--card-padding);
+}
+
+.footer {
+  padding: var(--card-padding);
+  border-top: 1px solid var(--color-border-subtle);
+  background-color: var(--color-bg-subtle);
+}
+
+.footer:last-child {
+  border-bottom-left-radius: var(--card-radius);
+  border-bottom-right-radius: var(--card-radius);
+}
+
+/* When using subcomponents, remove padding from card itself */
+.card:has(.header, .content, .footer) {
+  padding: 0;
+}
+
