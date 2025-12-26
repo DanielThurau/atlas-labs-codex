@@ -21,19 +21,32 @@ A deliberately small scale. If you need more sizes, question the design.
 
 ## Font Stack
 
-### Primary (Sans-Serif)
+### Primary (Martian Mono)
+```css
+--font-primary: "Martian Mono", "JetBrains Mono", "Fira Code", Consolas, monospace;
+```
+
+[Martian Mono](https://github.com/evilmartians/mono) is the primary typeface for all UI. It's a distinctive monospace font with excellent readability, variable font support, and a wide character set. The consistent character widths create natural alignment in data-heavy interfaces.
+
+**Why monospace as primary?**
+- Creates a distinctive, technical aesthetic
+- Natural alignment in tables, forms, and data displays
+- Consistent rhythm across all text
+- Works beautifully for developer tools and dashboards
+
+### Sans (Inter) — Secondary
 ```css
 --font-sans: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
 ```
 
-Inter is the workhorse. Clean, highly legible, excellent at small sizes. Use for all UI text.
+Inter is available as a fallback for contexts where proportional text is preferred (long-form content, marketing pages). Use sparingly.
 
-### Mono
+### Mono (Alias)
 ```css
---font-mono: "Martian Mono", "JetBrains Mono", "Fira Code", Consolas, monospace;
+--font-mono: var(--font-primary);
 ```
 
-[Martian Mono](https://github.com/evilmartians/mono) is a distinctive monospace typeface with a wide character set and variable font support. Used for code, technical content, and tabular data.
+Alias for `--font-primary`. Code blocks and `<code>` elements use this token.
 
 ---
 
@@ -84,7 +97,7 @@ Line height tokens are paired with font sizes:
 
 ```css
 body {
-  font-family: var(--font-sans);
+  font-family: var(--font-primary);
   font-size: var(--text-base);
   line-height: var(--leading-normal);
   color: var(--color-text-primary);
@@ -97,7 +110,7 @@ h1, h2, h3 {
   color: var(--color-text-primary);
 }
 
-code {
+code, pre {
   font-family: var(--font-mono);
   font-size: 0.875em;
 }

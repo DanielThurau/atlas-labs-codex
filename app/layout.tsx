@@ -3,15 +3,15 @@ import { Inter } from "next/font/google";
 import localFont from "next/font/local";
 import "./globals.css";
 
-const inter = Inter({
-  subsets: ["latin"],
-  variable: "--font-sans",
+const martianMono = localFont({
+  src: "../public/fonts/MartianMono-VariableFont_wdth,wght.ttf",
+  variable: "--font-primary",
   display: "swap",
 });
 
-const martianMono = localFont({
-  src: "../public/fonts/MartianMono-VariableFont_wdth,wght.ttf",
-  variable: "--font-mono",
+const inter = Inter({
+  subsets: ["latin"],
+  variable: "--font-sans",
   display: "swap",
 });
 
@@ -27,7 +27,7 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en" data-theme="light" suppressHydrationWarning>
-      <body className={`${inter.variable} ${martianMono.variable}`}>
+      <body className={`${martianMono.variable} ${inter.variable}`}>
         {children}
       </body>
     </html>

@@ -42,20 +42,20 @@ export default function Home() {
               <h3 style={{ marginBottom: "var(--space-4)" }}>Font Families</h3>
               <div className={styles.fontDemo}>
                 <div className={styles.fontFamily}>
-                  <span className={styles.fontLabel}>Sans (Inter)</span>
-                  <p className={styles.fontSample} style={{ fontFamily: "var(--font-sans)" }}>
+                  <span className={styles.fontLabel}>Primary (Martian Mono)</span>
+                  <p className={styles.fontSample} style={{ fontFamily: "var(--font-primary)" }}>
                     The quick brown fox jumps over the lazy dog
                   </p>
-                  <p className={styles.fontSample} style={{ fontFamily: "var(--font-sans)", fontSize: "var(--text-xl)" }}>
+                  <p className={styles.fontSample} style={{ fontFamily: "var(--font-primary)", fontSize: "var(--text-xl)" }}>
                     ABCDEFGHIJKLMNOPQRSTUVWXYZ 0123456789
                   </p>
                 </div>
                 <div className={styles.fontFamily}>
-                  <span className={styles.fontLabel}>Mono (Martian Mono)</span>
-                  <p className={styles.fontSample} style={{ fontFamily: "var(--font-mono)" }}>
+                  <span className={styles.fontLabel}>Sans — Secondary (Inter)</span>
+                  <p className={styles.fontSample} style={{ fontFamily: "var(--font-sans)" }}>
                     The quick brown fox jumps over the lazy dog
                   </p>
-                  <p className={styles.fontSample} style={{ fontFamily: "var(--font-mono)", fontSize: "var(--text-xl)" }}>
+                  <p className={styles.fontSample} style={{ fontFamily: "var(--font-sans)", fontSize: "var(--text-xl)" }}>
                     ABCDEFGHIJKLMNOPQRSTUVWXYZ 0123456789
                   </p>
                 </div>
