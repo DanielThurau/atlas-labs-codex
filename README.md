@@ -6,7 +6,50 @@ A private repository that acts as a single source of truth for all design-relate
 
 This is a **personal craftsman repository**—a tidy workshop where design decisions are explicit, documented, and reusable by your future self.
 
-## Prerequisites
+---
+
+## Using in Other Projects
+
+Install the codex directly from GitHub as a dependency:
+
+```bash
+# Using npm
+npm install github:your-username/atlas-labs-codex
+
+# Using pnpm
+pnpm add github:your-username/atlas-labs-codex
+```
+
+Then import components and styles:
+
+```tsx
+// Import components
+import { Button, Card, Input, Badge } from 'design-codex/components/react';
+
+// Import CSS (in your app's entry point)
+import 'design-codex/themes/css/base.css';
+import 'design-codex/themes/css/theme-light.css';
+import 'design-codex/themes/css/theme-dark.css';
+```
+
+### Font Setup
+
+Copy the Martian Mono font to your project's public folder, or load it in your CSS:
+
+```css
+@font-face {
+  font-family: 'Martian Mono';
+  src: url('/fonts/MartianMono-VariableFont_wdth,wght.ttf') format('truetype');
+  font-weight: 100 800;
+  font-display: swap;
+}
+```
+
+---
+
+## Development
+
+### Prerequisites
 
 **Node.js 18+** is required. Check your version:
 
@@ -21,7 +64,7 @@ nvm install 20
 nvm use 20
 ```
 
-## Quick Start
+### Quick Start
 
 ```bash
 # Install dependencies
@@ -46,12 +89,21 @@ npm run storybook
 │   └── patterns/       # UI pattern recipes
 ├── tokens/             # Design tokens
 │   └── tokens.json     # Source of truth
-├── themes/             # Generated theme files
-│   └── css/            # CSS custom properties
-├── components/         # React components
-│   └── react/          # Component library
-├── playground/         # Next.js development app
-└── scripts/            # Build utilities
+├── themes/css/         # CSS custom properties
+│   ├── base.css        # Primitives & component tokens
+│   ├── theme-light.css # Light mode
+│   └── theme-dark.css  # Dark mode
+├── components/react/   # React component library
+│   ├── Button/
+│   ├── Input/
+│   ├── Card/
+│   ├── Badge/
+│   ├── Modal/
+│   ├── Toast/
+│   └── Tabs/
+├── app/                # Next.js playground
+├── public/fonts/       # Martian Mono font files
+└── .storybook/         # Storybook configuration
 ```
 
 ## Design Tokens
