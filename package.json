@@ -1,5 +1,5 @@
 {
-  "name": "@atlas-labs/design-codex",
+  "name": "@danielthurau/atlas-labs-codex",
   "version": "0.1.0",
   "description": "Personal design system with React components, CSS tokens, and utilities",
   "author": "thurau",
