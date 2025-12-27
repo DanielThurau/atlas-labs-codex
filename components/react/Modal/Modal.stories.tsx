@@ -71,12 +71,11 @@ export const LargeModal: Story = {
     children: (
       <div>
         <p style={{ marginBottom: "16px" }}>
-          Large modals are suitable for complex content that needs more space,
-          such as detailed forms or previews.
+          Large modals are suitable for complex content that needs more space, such as detailed
+          forms or previews.
         </p>
         <p style={{ marginBottom: "16px" }}>
-          However, if your modal content is very complex, consider using a
-          dedicated page instead.
+          However, if your modal content is very complex, consider using a dedicated page instead.
         </p>
         <div style={{ display: "flex", gap: "8px", justifyContent: "flex-end" }}>
           <Button variant="secondary">Cancel</Button>
@@ -101,7 +100,7 @@ const ControlledExample = () => {
         description="This modal is controlled via state."
       >
         <p style={{ marginBottom: "16px" }}>
-          This modal's open state is controlled by the parent component.
+          This modal&apos;s open state is controlled by the parent component.
         </p>
         <div style={{ display: "flex", gap: "8px", justifyContent: "flex-end" }}>
           <Button variant="secondary" onClick={() => setOpen(false)}>
@@ -116,4 +115,3 @@ const ControlledExample = () => {
 export const Controlled: Story = {
   render: () => <ControlledExample />,
 };
-

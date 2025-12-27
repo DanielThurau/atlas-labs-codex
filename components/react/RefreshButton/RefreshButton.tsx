@@ -28,14 +28,14 @@ export function RefreshButton({ onRefresh, onForceCheck, disabled }: RefreshButt
   const [isChecking, setIsChecking] = useState(false);
   const [selectedInterval, setSelectedInterval] = useState<IntervalOption>(INTERVAL_OPTIONS[0]);
   const [progress, setProgress] = useState(0);
-  const [timeLeft, setTimeLeft] = useState<number | null>(null);
-  
+  const [_timeLeft, setTimeLeft] = useState<number | null>(null);
+
   const intervalRef = useRef<NodeJS.Timeout | null>(null);
   const progressRef = useRef<NodeJS.Timeout | null>(null);
   const dropdownRef = useRef<HTMLDivElement>(null);
   const onRefreshRef = useRef(onRefresh);
   const onForceCheckRef = useRef(onForceCheck);
-  
+
   // Keep refs updated
   useEffect(() => {
     onRefreshRef.current = onRefresh;
@@ -45,10 +45,10 @@ export function RefreshButton({ onRefresh, onForceCheck, disabled }: RefreshButt
   // Handle manual refresh
   const handleRefresh = useCallback(async () => {
     if (isRefreshing || disabled) return;
-    
+
     setIsRefreshing(true);
     setProgress(0);
-    
+
     try {
       await onRefreshRef.current();
     } finally {
@@ -72,10 +72,10 @@ export function RefreshButton({ onRefresh, onForceCheck, disabled }: RefreshButt
   // Handle force check (runs actual health checks)
   const handleForceCheck = useCallback(async () => {
     if (isChecking || disabled || !onForceCheckRef.current) return;
-    
+
     setIsChecking(true);
     setIsOpen(false);
-    
+
     try {
       await onForceCheckRef.current();
     } finally {
@@ -154,9 +154,7 @@ export function RefreshButton({ onRefresh, onForceCheck, disabled }: RefreshButt
             disabled={isRefreshing || disabled}
             title="Refresh now"
           >
-            <span className={`${styles.icon} ${isRefreshing ? styles.spinning : ""}`}>
-              ↻
-            </span>
+            <span className={`${styles.icon} ${isRefreshing ? styles.spinning : ""}`}>↻</span>
             {isRefreshing ? "Refreshing..." : "Refresh"}
           </button>
 
@@ -167,9 +165,7 @@ export function RefreshButton({ onRefresh, onForceCheck, disabled }: RefreshButt
             disabled={disabled}
             title="Set auto-refresh interval"
           >
-            <span className={styles.intervalLabel}>
-              {selectedInterval.label}
-            </span>
+            <span className={styles.intervalLabel}>{selectedInterval.label}</span>
             <span className={styles.chevron}>{isOpen ? "▲" : "▼"}</span>
           </button>
         </div>
@@ -177,10 +173,7 @@ export function RefreshButton({ onRefresh, onForceCheck, disabled }: RefreshButt
         {/* Progress bar - only shows when auto-refresh is active */}
         {isAutoRefresh && (
           <div className={styles.progressBar}>
-            <div 
-              className={styles.progressFill} 
-              style={{ width: `${progress}%` }}
-            />
+            <div className={styles.progressFill} style={{ width: `${progress}%` }} />
           </div>
         )}
       </div>
@@ -219,4 +212,3 @@ export function RefreshButton({ onRefresh, onForceCheck, disabled }: RefreshButt
     </div>
   );
 }
-

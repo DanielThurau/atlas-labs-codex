@@ -18,7 +18,9 @@
   border-radius: var(--input-radius);
   background-color: var(--color-bg-surface);
   color: var(--color-text-primary);
-  transition: border-color 150ms ease, box-shadow 150ms ease;
+  transition:
+    border-color 150ms ease,
+    box-shadow 150ms ease;
 }
 
 .input::placeholder {
@@ -60,4 +62,3 @@
   font-size: var(--text-sm);
   color: var(--color-text-secondary);
 }
-

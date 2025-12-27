@@ -25,8 +25,7 @@ export const Default: Story = {
   args: {
     children: (
       <p>
-        This is a basic card with some content. Cards are used to group related
-        content together.
+        This is a basic card with some content. Cards are used to group related content together.
       </p>
     ),
   },
@@ -35,11 +34,7 @@ export const Default: Story = {
 export const Elevated: Story = {
   args: {
     elevated: true,
-    children: (
-      <p>
-        This card has elevation (shadow) for a more prominent appearance.
-      </p>
-    ),
+    children: <p>This card has elevation (shadow) for a more prominent appearance.</p>,
   },
 };
 
@@ -82,9 +77,7 @@ export const Complete: Story = {
         <p style={{ marginBottom: "16px" }}>
           Configure your project settings here. Changes will be saved automatically.
         </p>
-        <p>
-          Last updated: January 1, 2024
-        </p>
+        <p>Last updated: January 1, 2024</p>
       </CardContent>
       <CardFooter>
         <div style={{ display: "flex", gap: "8px", justifyContent: "flex-end" }}>
@@ -111,4 +104,3 @@ export const PaddingVariants: Story = {
     </div>
   ),
 };
-

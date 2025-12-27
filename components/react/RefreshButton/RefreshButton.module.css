@@ -28,7 +28,9 @@
   font-size: var(--text-sm);
   color: var(--color-text-primary);
   cursor: pointer;
-  transition: background 150ms, color 150ms;
+  transition:
+    background 150ms,
+    color 150ms;
 }
 
 /* When progress bar is shown, remove bottom radius */
@@ -55,8 +57,12 @@
 }
 
 @keyframes spin {
-  from { transform: rotate(0deg); }
-  to { transform: rotate(360deg); }
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
 }
 
 /* Dropdown trigger */
@@ -190,13 +196,12 @@
   .refreshButton span:not(.icon) {
     display: none;
   }
-  
+
   .refreshButton {
     padding: var(--space-2);
   }
-  
+
   .dropdownTrigger {
     min-width: 50px;
   }
 }
-

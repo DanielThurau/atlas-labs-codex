@@ -30,9 +30,7 @@ export const Default: Story = {
         content: (
           <Card>
             <h3>Account Settings</h3>
-            <p style={{ marginTop: "8px" }}>
-              Manage your account settings and preferences.
-            </p>
+            <p style={{ marginTop: "8px" }}>Manage your account settings and preferences.</p>
           </Card>
         ),
       },
@@ -42,9 +40,7 @@ export const Default: Story = {
         content: (
           <Card>
             <h3>Password Settings</h3>
-            <p style={{ marginTop: "8px" }}>
-              Update your password and security options.
-            </p>
+            <p style={{ marginTop: "8px" }}>Update your password and security options.</p>
           </Card>
         ),
       },
@@ -54,9 +50,7 @@ export const Default: Story = {
         content: (
           <Card>
             <h3>Notification Preferences</h3>
-            <p style={{ marginTop: "8px" }}>
-              Configure how you receive notifications.
-            </p>
+            <p style={{ marginTop: "8px" }}>Configure how you receive notifications.</p>
           </Card>
         ),
       },
@@ -75,7 +69,7 @@ export const WithDisabledTab: Story = {
       {
         id: "disabled",
         label: "Disabled",
-        content: <Card>You shouldn't see this.</Card>,
+        content: <Card>You shouldn&apos;t see this.</Card>,
         disabled: true,
       },
       {
@@ -98,4 +92,3 @@ export const ManyTabs: Story = {
     ],
   },
 };
-

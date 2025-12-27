@@ -68,7 +68,9 @@
   background: transparent;
   border: none;
   cursor: pointer;
-  transition: background-color 150ms ease, color 150ms ease;
+  transition:
+    background-color 150ms ease,
+    color 150ms ease;
 }
 
 .close:hover {
@@ -100,4 +102,3 @@
     transform: translate(-50%, -50%) scale(1);
   }
 }
-

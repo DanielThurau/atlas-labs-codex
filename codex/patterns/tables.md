@@ -7,12 +7,14 @@ Guidelines for displaying data in tables.
 ## When to Use Tables
 
 ✓ **Use tables for:**
+
 - Structured data with consistent attributes
 - Data that benefits from sorting/filtering
 - Comparisons across multiple items
 - Lists with many attributes per item
 
 ✗ **Avoid tables for:**
+
 - Simple lists (use a list component)
 - Card-like content (use cards)
 - Mobile-first interfaces (tables struggle)
@@ -40,13 +42,13 @@ Guidelines for displaying data in tables.
 
 ### Alignment
 
-| Content Type | Alignment |
-|--------------|-----------|
-| Text | Left |
-| Numbers | Right |
-| Dates | Left or Right (be consistent) |
-| Status badges | Left |
-| Actions | Right |
+| Content Type  | Alignment                     |
+| ------------- | ----------------------------- |
+| Text          | Left                          |
+| Numbers       | Right                         |
+| Dates         | Left or Right (be consistent) |
+| Status badges | Left                          |
+| Actions       | Right                         |
 
 ### Width
 
@@ -68,11 +70,11 @@ Order columns by importance. Users scan left-to-right:
 
 ## Density Variants
 
-| Density | Row Height | Use Case |
-|---------|------------|----------|
-| Compact | 36px | Data-heavy views, power users |
-| Default | 44px | Standard use |
-| Relaxed | 56px | Touch interfaces, readability |
+| Density | Row Height | Use Case                      |
+| ------- | ---------- | ----------------------------- |
+| Compact | 36px       | Data-heavy views, power users |
+| Default | 44px       | Standard use                  |
+| Relaxed | 56px       | Touch interfaces, readability |
 
 ---
 
@@ -218,4 +220,3 @@ Tables don't adapt well to mobile. Strategies:
 - ❌ Zebra striping (outdated, adds noise)
 - ❌ Actions only visible on hover
 - ❌ Nested tables
-

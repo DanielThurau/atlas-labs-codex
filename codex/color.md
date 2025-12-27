@@ -10,40 +10,40 @@ Never use raw palette values directly. Always use semantic tokens.
 
 ### Backgrounds
 
-| Token | Use Case |
-|-------|----------|
-| `color.bg.default` | Page background |
-| `color.bg.surface` | Cards, panels |
-| `color.bg.elevated` | Modals, popovers |
-| `color.bg.subtle` | Secondary sections |
-| `color.bg.muted` | Disabled states |
+| Token               | Use Case           |
+| ------------------- | ------------------ |
+| `color.bg.default`  | Page background    |
+| `color.bg.surface`  | Cards, panels      |
+| `color.bg.elevated` | Modals, popovers   |
+| `color.bg.subtle`   | Secondary sections |
+| `color.bg.muted`    | Disabled states    |
 
 ### Text
 
-| Token | Use Case |
-|-------|----------|
-| `color.text.primary` | Main content |
-| `color.text.secondary` | Supporting text |
-| `color.text.muted` | Placeholder, disabled |
-| `color.text.inverse` | Text on dark backgrounds |
+| Token                  | Use Case                 |
+| ---------------------- | ------------------------ |
+| `color.text.primary`   | Main content             |
+| `color.text.secondary` | Supporting text          |
+| `color.text.muted`     | Placeholder, disabled    |
+| `color.text.inverse`   | Text on dark backgrounds |
 
 ### Borders
 
-| Token | Use Case |
-|-------|----------|
-| `color.border.default` | Standard borders |
-| `color.border.subtle` | Dividers, separators |
-| `color.border.strong` | Emphasis, focus |
+| Token                  | Use Case             |
+| ---------------------- | -------------------- |
+| `color.border.default` | Standard borders     |
+| `color.border.subtle`  | Dividers, separators |
+| `color.border.strong`  | Emphasis, focus      |
 
 ### Intent Colors
 
-| Token | Use Case |
-|-------|----------|
-| `color.intent.primary` | Primary actions |
-| `color.intent.primary-hover` | Primary hover state |
-| `color.intent.success` | Positive feedback |
-| `color.intent.warning` | Caution, alerts |
-| `color.intent.danger` | Destructive actions, errors |
+| Token                        | Use Case                    |
+| ---------------------------- | --------------------------- |
+| `color.intent.primary`       | Primary actions             |
+| `color.intent.primary-hover` | Primary hover state         |
+| `color.intent.success`       | Positive feedback           |
+| `color.intent.warning`       | Caution, alerts             |
+| `color.intent.danger`        | Destructive actions, errors |
 
 ---
 
@@ -101,13 +101,13 @@ All foreground/background pairs meet WCAG AA (4.5:1 for text, 3:1 for large text
 
 ### Pre-validated Pairs
 
-| Background | Foreground | Ratio |
-|------------|------------|-------|
-| `bg.default` (light) | `text.primary` | 15.8:1 ✓ |
-| `bg.surface` (light) | `text.secondary` | 7.2:1 ✓ |
-| `intent.primary` | white | 4.9:1 ✓ |
-| `intent.danger` | white | 4.5:1 ✓ |
-| `bg.default` (dark) | `text.primary` | 14.7:1 ✓ |
+| Background           | Foreground       | Ratio    |
+| -------------------- | ---------------- | -------- |
+| `bg.default` (light) | `text.primary`   | 15.8:1 ✓ |
+| `bg.surface` (light) | `text.secondary` | 7.2:1 ✓  |
+| `intent.primary`     | white            | 4.9:1 ✓  |
+| `intent.danger`      | white            | 4.5:1 ✓  |
+| `bg.default` (dark)  | `text.primary`   | 14.7:1 ✓ |
 
 If you're using semantic tokens correctly, contrast is automatic.
 
@@ -158,4 +158,3 @@ If you're using semantic tokens correctly, contrast is automatic.
 - ❌ Inventing new colors outside the palette
 - ❌ Low-contrast text for "aesthetic" reasons
 - ❌ Different semantic colors for the same concept across screens
-

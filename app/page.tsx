@@ -36,7 +36,7 @@ export default function Home() {
           {/* Typography Section */}
           <section className={styles.section}>
             <h2>Typography</h2>
-            
+
             {/* Font Families */}
             <Card>
               <h3 style={{ marginBottom: "var(--space-4)" }}>Font Families</h3>
@@ -46,7 +46,10 @@ export default function Home() {
                   <p className={styles.fontSample} style={{ fontFamily: "var(--font-primary)" }}>
                     The quick brown fox jumps over the lazy dog
                   </p>
-                  <p className={styles.fontSample} style={{ fontFamily: "var(--font-primary)", fontSize: "var(--text-xl)" }}>
+                  <p
+                    className={styles.fontSample}
+                    style={{ fontFamily: "var(--font-primary)", fontSize: "var(--text-xl)" }}
+                  >
                     ABCDEFGHIJKLMNOPQRSTUVWXYZ 0123456789
                   </p>
                 </div>
@@ -55,7 +58,10 @@ export default function Home() {
                   <p className={styles.fontSample} style={{ fontFamily: "var(--font-sans)" }}>
                     The quick brown fox jumps over the lazy dog
                   </p>
-                  <p className={styles.fontSample} style={{ fontFamily: "var(--font-sans)", fontSize: "var(--text-xl)" }}>
+                  <p
+                    className={styles.fontSample}
+                    style={{ fontFamily: "var(--font-sans)", fontSize: "var(--text-xl)" }}
+                  >
                     ABCDEFGHIJKLMNOPQRSTUVWXYZ 0123456789
                   </p>
                 </div>
@@ -115,20 +121,34 @@ function greet(name: string) {
             <Card>
               <h3 style={{ marginBottom: "var(--space-4)" }}>Semantic Colors</h3>
               <div className={styles.colorGrid}>
-                <div className={styles.colorSwatch} style={{ backgroundColor: "var(--color-intent-primary)" }}>
+                <div
+                  className={styles.colorSwatch}
+                  style={{ backgroundColor: "var(--color-intent-primary)" }}
+                >
                   <span>Primary</span>
                 </div>
-                <div className={styles.colorSwatch} style={{ backgroundColor: "var(--color-intent-success)" }}>
+                <div
+                  className={styles.colorSwatch}
+                  style={{ backgroundColor: "var(--color-intent-success)" }}
+                >
                   <span>Success</span>
                 </div>
-                <div className={styles.colorSwatch} style={{ backgroundColor: "var(--color-intent-warning)" }}>
+                <div
+                  className={styles.colorSwatch}
+                  style={{ backgroundColor: "var(--color-intent-warning)" }}
+                >
                   <span>Warning</span>
                 </div>
-                <div className={styles.colorSwatch} style={{ backgroundColor: "var(--color-intent-danger)" }}>
+                <div
+                  className={styles.colorSwatch}
+                  style={{ backgroundColor: "var(--color-intent-danger)" }}
+                >
                   <span>Danger</span>
                 </div>
               </div>
-              <h3 style={{ marginTop: "var(--space-6)", marginBottom: "var(--space-4)" }}>Neutral Scale</h3>
+              <h3 style={{ marginTop: "var(--space-6)", marginBottom: "var(--space-4)" }}>
+                Neutral Scale
+              </h3>
               <div className={styles.colorStrip}>
                 {[50, 100, 200, 300, 400, 500, 600, 700, 800, 900, 950].map((shade) => (
                   <div
@@ -150,10 +170,7 @@ function greet(name: string) {
                 {[1, 2, 3, 4, 6, 8, 12, 16].map((size) => (
                   <div key={size} className={styles.spacingRow}>
                     <code>space-{size}</code>
-                    <div
-                      className={styles.spacingBar}
-                      style={{ width: `var(--space-${size})` }}
-                    />
+                    <div className={styles.spacingBar} style={{ width: `var(--space-${size})` }} />
                   </div>
                 ))}
               </div>
@@ -242,9 +259,16 @@ function greet(name: string) {
                         description="This is an example modal dialog."
                       >
                         <p style={{ marginBottom: "var(--space-4)" }}>
-                          Modal content goes here. You can put forms, information, or any other content.
+                          Modal content goes here. You can put forms, information, or any other
+                          content.
                         </p>
-                        <div style={{ display: "flex", gap: "var(--space-2)", justifyContent: "flex-end" }}>
+                        <div
+                          style={{
+                            display: "flex",
+                            gap: "var(--space-2)",
+                            justifyContent: "flex-end",
+                          }}
+                        >
                           <Button variant="secondary" onClick={() => setModalOpen(false)}>
                             Cancel
                           </Button>
@@ -283,4 +307,3 @@ function greet(name: string) {
     </ToastProvider>
   );
 }
-

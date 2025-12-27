@@ -45,11 +45,7 @@ export const Tabs = forwardRef<HTMLDivElement, TabsProps>(
           ))}
         </TabsPrimitive.List>
         {tabs.map((tab) => (
-          <TabsPrimitive.Content
-            key={tab.id}
-            value={tab.id}
-            className={styles.content}
-          >
+          <TabsPrimitive.Content key={tab.id} value={tab.id} className={styles.content}>
             {tab.content}
           </TabsPrimitive.Content>
         ))}
@@ -59,4 +55,3 @@ export const Tabs = forwardRef<HTMLDivElement, TabsProps>(
 );
 
 Tabs.displayName = "Tabs";
-

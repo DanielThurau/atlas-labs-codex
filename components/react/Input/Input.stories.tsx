@@ -71,18 +71,9 @@ export const AllStates: Story = {
   render: () => (
     <div style={{ display: "flex", flexDirection: "column", gap: "24px" }}>
       <Input label="Default" placeholder="Enter text" />
-      <Input
-        label="With Helper"
-        placeholder="Enter text"
-        helperText="This is helper text"
-      />
-      <Input
-        label="With Error"
-        placeholder="Enter text"
-        error="This field is required"
-      />
+      <Input label="With Helper" placeholder="Enter text" helperText="This is helper text" />
+      <Input label="With Error" placeholder="Enter text" error="This field is required" />
       <Input label="Disabled" placeholder="Enter text" disabled />
     </div>
   ),
 };
-

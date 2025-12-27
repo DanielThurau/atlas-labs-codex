@@ -7,11 +7,7 @@
 .header {
   padding: var(--space-16) var(--space-8) var(--space-8);
   text-align: center;
-  background: linear-gradient(
-    to bottom,
-    var(--color-intent-primary-bg),
-    var(--color-bg-default)
-  );
+  background: linear-gradient(to bottom, var(--color-intent-primary-bg), var(--color-bg-default));
 }
 
 .header h1 {
@@ -157,11 +153,7 @@
 
 .spacingBar {
   height: 24px;
-  background: linear-gradient(
-    135deg,
-    var(--color-intent-primary),
-    var(--color-indigo-400)
-  );
+  background: linear-gradient(135deg, var(--color-intent-primary), var(--color-indigo-400));
   border-radius: var(--radius-sm);
   min-width: 4px;
 }
@@ -192,4 +184,3 @@
   font-size: var(--text-sm);
   color: var(--color-text-muted);
 }
-

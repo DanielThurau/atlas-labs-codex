@@ -36,17 +36,20 @@ Button/
 The primary interactive element.
 
 **Variants:**
+
 - `primary` — Main actions (submit, save)
 - `secondary` — Secondary actions (cancel, back)
 - `ghost` — Tertiary actions, navigation
 - `danger` — Destructive actions (delete)
 
 **Sizes:**
+
 - `sm` — Compact contexts
 - `md` — Default
 - `lg` — Hero actions
 
 **States:**
+
 - Default, hover, active, focus, disabled, loading
 
 ---
@@ -56,12 +59,14 @@ The primary interactive element.
 Text input with integrated label and validation.
 
 **Features:**
+
 - Label (required for accessibility)
 - Helper text
 - Error state with message
 - Disabled state
 
 **Variants:**
+
 - Default text input
 - Password (with toggle)
 - Textarea
@@ -73,6 +78,7 @@ Text input with integrated label and validation.
 Container for related content.
 
 **Features:**
+
 - Optional header
 - Content area
 - Optional footer
@@ -85,6 +91,7 @@ Container for related content.
 Inline status indicators.
 
 **Variants:**
+
 - `neutral` — Default state
 - `primary` — Highlighted
 - `success` — Positive
@@ -98,6 +105,7 @@ Inline status indicators.
 Overlay for focused interactions.
 
 **Features:**
+
 - Accessible focus trap
 - Keyboard dismissal (Escape)
 - Click-outside to close
@@ -110,6 +118,7 @@ Overlay for focused interactions.
 Contextual content triggered by an anchor.
 
 **Features:**
+
 - Positioning (top, bottom, left, right)
 - Auto-flip when constrained
 - Keyboard navigation
@@ -121,12 +130,14 @@ Contextual content triggered by an anchor.
 Transient feedback messages.
 
 **Variants:**
+
 - `info` — Neutral information
 - `success` — Positive confirmation
 - `warning` — Attention needed
 - `error` — Something went wrong
 
 **Features:**
+
 - Auto-dismiss with configurable duration
 - Manual dismiss
 - Action button (optional)
@@ -138,6 +149,7 @@ Transient feedback messages.
 Content organization through tabbed navigation.
 
 **Features:**
+
 - Keyboard navigation
 - Accessible ARIA structure
 - Controlled or uncontrolled
@@ -149,6 +161,7 @@ Content organization through tabbed navigation.
 Data display in rows and columns.
 
 **Features:**
+
 - Sortable columns
 - Fixed header on scroll
 - Loading skeleton
@@ -170,9 +183,7 @@ export function Modal({ children, open, onOpenChange }) {
     <Dialog.Root open={open} onOpenChange={onOpenChange}>
       <Dialog.Portal>
         <Dialog.Overlay className="modal-overlay" />
-        <Dialog.Content className="modal-content">
-          {children}
-        </Dialog.Content>
+        <Dialog.Content className="modal-content">{children}</Dialog.Content>
       </Dialog.Portal>
     </Dialog.Root>
   );
@@ -226,4 +237,3 @@ Prefer composition over configuration:
 - ❌ Too many variants (if you need 10 button types, question the design)
 - ❌ Prop drilling for styling (use CSS)
 - ❌ Components that do too much
-

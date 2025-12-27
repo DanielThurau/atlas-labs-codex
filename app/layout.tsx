@@ -20,17 +20,10 @@ export const metadata: Metadata = {
   description: "Personal design system and component library",
 };
 
-export default function RootLayout({
-  children,
-}: {
-  children: React.ReactNode;
-}) {
+export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
     <html lang="en" data-theme="light" suppressHydrationWarning>
-      <body className={`${martianMono.variable} ${inter.variable}`}>
-        {children}
-      </body>
+      <body className={`${martianMono.variable} ${inter.variable}`}>{children}</body>
     </html>
   );
 }
-

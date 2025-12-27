@@ -56,4 +56,3 @@
 .card:has(.header, .content, .footer) {
   padding: 0;
 }
-

@@ -98,9 +98,7 @@ const AllVariantsDemo = () => {
   };
 
   const closeToast = (id: number) => {
-    setToasts((prev) =>
-      prev.map((t) => (t.id === id ? { ...t, open: false } : t))
-    );
+    setToasts((prev) => prev.map((t) => (t.id === id ? { ...t, open: false } : t)));
   };
 
   const titles = {
@@ -140,4 +138,3 @@ const AllVariantsDemo = () => {
 export const AllVariants: Story = {
   render: () => <AllVariantsDemo />,
 };
-

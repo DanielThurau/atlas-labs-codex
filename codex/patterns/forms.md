@@ -29,13 +29,13 @@ Forms stack vertically by default. Each field occupies its own row.
 
 ### Spacing
 
-| Element | Spacing |
-|---------|---------|
-| Label → Input | `space-2` (8px) |
-| Input → Helper | `space-1` (4px) |
-| Field → Field | `space-4` (16px) |
+| Element           | Spacing          |
+| ----------------- | ---------------- |
+| Label → Input     | `space-2` (8px)  |
+| Input → Helper    | `space-1` (4px)  |
+| Field → Field     | `space-4` (16px) |
 | Section → Section | `space-8` (32px) |
-| Form → Actions | `space-6` (24px) |
+| Form → Actions    | `space-6` (24px) |
 
 ---
 
@@ -83,15 +83,16 @@ Every field consists of:
 ### Messages
 
 Write error messages that:
+
 - Say what went wrong
 - Suggest how to fix it
 - Use sentence case
 
-| ✓ Good | ✗ Avoid |
-|--------|---------|
-| "Email address is required" | "Required field" |
+| ✓ Good                                   | ✗ Avoid            |
+| ---------------------------------------- | ------------------ |
+| "Email address is required"              | "Required field"   |
 | "Password must be at least 8 characters" | "Invalid password" |
-| "Please enter a valid phone number" | "Error" |
+| "Please enter a valid phone number"      | "Error"            |
 
 ---
 
@@ -118,9 +119,7 @@ Primary action on the right. Secondary actions on the left.
 Disable the form and show loading indicator on submit:
 
 ```tsx
-<Button disabled={isSubmitting}>
-  {isSubmitting ? "Saving..." : "Save"}
-</Button>
+<Button disabled={isSubmitting}>{isSubmitting ? "Saving..." : "Save"}</Button>
 ```
 
 ---
@@ -180,4 +179,3 @@ Disable the form and show loading indicator on submit:
 - ❌ Error messages without context
 - ❌ Required fields without indication
 - ❌ Submit button before all fields
-

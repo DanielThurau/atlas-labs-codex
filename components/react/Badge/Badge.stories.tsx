@@ -76,4 +76,3 @@ export const StatusBadges: Story = {
     </div>
   ),
 };
-

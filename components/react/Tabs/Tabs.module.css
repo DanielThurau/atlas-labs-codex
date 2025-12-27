@@ -20,7 +20,9 @@
   border-bottom: 2px solid transparent;
   margin-bottom: -1px;
   cursor: pointer;
-  transition: color 150ms ease, border-color 150ms ease;
+  transition:
+    color 150ms ease,
+    border-color 150ms ease;
 }
 
 .trigger:hover:not(:disabled) {
@@ -55,4 +57,3 @@
 .content[data-state="inactive"] {
   display: none;
 }
-

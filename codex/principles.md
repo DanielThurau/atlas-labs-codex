@@ -9,6 +9,7 @@ These principles guide every decision in the codex.
 All visual values live in tokens. Components and styles reference tokens, never raw values.
 
 **Do this:**
+
 ```css
 .card {
   background: var(--color-bg-surface);
@@ -17,6 +18,7 @@ All visual values live in tokens. Components and styles reference tokens, never 
 ```
 
 **Not this:**
+
 ```css
 .card {
   background: #ffffff;
@@ -30,11 +32,11 @@ All visual values live in tokens. Components and styles reference tokens, never 
 
 Names communicate intent, not appearance.
 
-| ✓ Good | ✗ Avoid |
-|--------|---------|
-| `color.text.primary` | `gray-900` |
-| `color.intent.danger` | `red-500` |
-| `spacing.content` | `spacing-16` |
+| ✓ Good                | ✗ Avoid      |
+| --------------------- | ------------ |
+| `color.text.primary`  | `gray-900`   |
+| `color.intent.danger` | `red-500`    |
+| `spacing.content`     | `spacing-16` |
 
 ---
 
@@ -83,4 +85,3 @@ The codex is intentionally opinionated. Constraints:
 - Make the codebase predictable
 
 The goal is not to cover every edge case. The goal is to make 90% of decisions automatic.
-

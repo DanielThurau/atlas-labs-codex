@@ -20,15 +20,15 @@ Then import components, styles, and utilities:
 
 ```tsx
 // Import components
-import { Button, Card, Input, Badge, RefreshButton } from '@atlas-labs/design-codex';
+import { Button, Card, Input, Badge, RefreshButton } from "@atlas-labs/design-codex";
 
 // Import utilities
-import { formatRelativeTime, clsx } from '@atlas-labs/design-codex/lib';
+import { formatRelativeTime, clsx } from "@atlas-labs/design-codex/lib";
 
 // Import CSS (in your layout.tsx or entry point)
-import '@atlas-labs/design-codex/themes/css/base.css';
-import '@atlas-labs/design-codex/themes/css/theme-light.css';
-import '@atlas-labs/design-codex/themes/css/theme-dark.css';
+import "@atlas-labs/design-codex/themes/css/base.css";
+import "@atlas-labs/design-codex/themes/css/theme-light.css";
+import "@atlas-labs/design-codex/themes/css/theme-dark.css";
 ```
 
 ### Font Setup
@@ -37,8 +37,8 @@ Copy the Martian Mono font to your project's public folder, or load it in your C
 
 ```css
 @font-face {
-  font-family: 'Martian Mono';
-  src: url('/fonts/MartianMono-VariableFont_wdth,wght.ttf') format('truetype');
+  font-family: "Martian Mono";
+  src: url("/fonts/MartianMono-VariableFont_wdth,wght.ttf") format("truetype");
   font-weight: 100 800;
   font-display: swap;
 }
@@ -121,13 +121,15 @@ The codex supports light and dark themes via CSS custom properties. Theme switch
 
 ```html
 <html data-theme="light">
-<!-- or -->
-<html data-theme="dark">
+  <!-- or -->
+  <html data-theme="dark"></html>
+</html>
 ```
 
 ## Components
 
 All components:
+
 - Use tokens exclusively (no hardcoded values)
 - Are built on Radix UI primitives for accessibility
 - Encode taste, not flexibility
@@ -135,4 +137,3 @@ All components:
 ## License
 
 Private repository. Personal use only.
-

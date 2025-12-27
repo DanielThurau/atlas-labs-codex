@@ -1,13 +1,6 @@
 "use client";
 
-import {
-  forwardRef,
-  type ReactNode,
-  createContext,
-  useContext,
-  useState,
-  useCallback,
-} from "react";
+import { forwardRef, type ReactNode, createContext, useContext } from "react";
 import * as ToastPrimitive from "@radix-ui/react-toast";
 import { clsx } from "clsx";
 import styles from "./Toast.module.css";
@@ -39,15 +32,7 @@ export interface ToastProps {
 
 export const Toast = forwardRef<HTMLLIElement, ToastProps>(
   (
-    {
-      open,
-      onOpenChange,
-      title,
-      description,
-      action,
-      variant = "default",
-      duration = 5000,
-    },
+    { open, onOpenChange, title, description, action, variant = "default", duration = 5000 },
     ref
   ) => {
     return (
@@ -59,11 +44,7 @@ export const Toast = forwardRef<HTMLLIElement, ToastProps>(
         className={clsx(styles.root, styles[variant])}
       >
         <div className={styles.content}>
-          {title && (
-            <ToastPrimitive.Title className={styles.title}>
-              {title}
-            </ToastPrimitive.Title>
-          )}
+          {title && <ToastPrimitive.Title className={styles.title}>{title}</ToastPrimitive.Title>}
           {description && (
             <ToastPrimitive.Description className={styles.description}>
               {description}
@@ -120,4 +101,3 @@ export function useToast() {
   }
   return context;
 }
-

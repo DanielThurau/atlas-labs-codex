@@ -7,12 +7,14 @@ Guidelines for when and how to use modals effectively.
 ## When to Use Modals
 
 ✓ **Use modals for:**
+
 - Confirmations requiring explicit user decision
 - Focused tasks that shouldn't lose context
 - Critical warnings that must be acknowledged
 - Quick creation flows (new item, quick edit)
 
 ✗ **Avoid modals for:**
+
 - Information that could be inline
 - Complex multi-step flows (use a page instead)
 - Non-critical notifications (use toasts)
@@ -40,12 +42,12 @@ Guidelines for when and how to use modals effectively.
 
 ## Size Guidelines
 
-| Size | Width | Use Case |
-|------|-------|----------|
-| `sm` | 400px | Confirmations, alerts |
-| `md` | 500px | Forms, simple tasks |
+| Size | Width | Use Case                |
+| ---- | ----- | ----------------------- |
+| `sm` | 400px | Confirmations, alerts   |
+| `md` | 500px | Forms, simple tasks     |
 | `lg` | 640px | Complex forms, previews |
-| `xl` | 800px | Rich content (rare) |
+| `xl` | 800px | Rich content (rare)     |
 
 Default to `sm` or `md`. If you need `xl`, consider a page instead.
 
@@ -54,16 +56,19 @@ Default to `sm` or `md`. If you need `xl`, consider a page instead.
 ## Behavior
 
 ### Opening
+
 - Focus moves to the first focusable element
 - Background content is inert (not focusable)
 - Overlay darkens background
 
 ### Closing
+
 - Escape key closes the modal
 - Clicking overlay closes the modal (unless destructive)
 - Focus returns to the trigger element
 
 ### Animation
+
 ```css
 .modal-overlay {
   animation: fadeIn 150ms ease-out;
@@ -74,16 +79,20 @@ Default to `sm` or `md`. If you need `xl`, consider a page instead.
 }
 
 @keyframes fadeIn {
-  from { opacity: 0; }
-  to { opacity: 1; }
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
 }
 
 @keyframes slideUp {
-  from { 
+  from {
     opacity: 0;
     transform: translateY(8px) scale(0.98);
   }
-  to { 
+  to {
     opacity: 1;
     transform: translateY(0) scale(1);
   }
@@ -166,4 +175,3 @@ For modals containing forms:
 - ❌ Modals that open without user action
 - ❌ Important information only in modal titles
 - ❌ "Are you sure?" without context
-

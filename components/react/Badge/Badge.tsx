@@ -19,19 +19,14 @@ const badgeVariants = cva(styles.badge, {
 });
 
 export interface BadgeProps
-  extends HTMLAttributes<HTMLSpanElement>,
-    VariantProps<typeof badgeVariants> {
+  extends HTMLAttributes<HTMLSpanElement>, VariantProps<typeof badgeVariants> {
   children: ReactNode;
 }
 
 export const Badge = forwardRef<HTMLSpanElement, BadgeProps>(
   ({ className, variant, children, ...props }, ref) => {
     return (
-      <span
-        ref={ref}
-        className={clsx(badgeVariants({ variant }), className)}
-        {...props}
-      >
+      <span ref={ref} className={clsx(badgeVariants({ variant }), className)} {...props}>
         {children}
       </span>
     );
@@ -39,4 +34,3 @@ export const Badge = forwardRef<HTMLSpanElement, BadgeProps>(
 );
 
 Badge.displayName = "Badge";
-

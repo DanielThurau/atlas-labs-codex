@@ -16,34 +16,16 @@ export interface ModalProps {
 }
 
 export const Modal = forwardRef<HTMLDivElement, ModalProps>(
-  (
-    {
-      open,
-      onOpenChange,
-      trigger,
-      title,
-      description,
-      children,
-      size = "md",
-    },
-    ref
-  ) => {
+  ({ open, onOpenChange, trigger, title, description, children, size = "md" }, ref) => {
     return (
       <Dialog.Root open={open} onOpenChange={onOpenChange}>
         {trigger && <Dialog.Trigger asChild>{trigger}</Dialog.Trigger>}
         <Dialog.Portal>
           <Dialog.Overlay className={styles.overlay} />
-          <Dialog.Content
-            ref={ref}
-            className={clsx(styles.content, styles[size])}
-          >
-            {title && (
-              <Dialog.Title className={styles.title}>{title}</Dialog.Title>
-            )}
+          <Dialog.Content ref={ref} className={clsx(styles.content, styles[size])}>
+            {title && <Dialog.Title className={styles.title}>{title}</Dialog.Title>}
             {description && (
-              <Dialog.Description className={styles.description}>
-                {description}
-              </Dialog.Description>
+              <Dialog.Description className={styles.description}>{description}</Dialog.Description>
             )}
             {children}
             <Dialog.Close asChild>
@@ -72,4 +54,3 @@ export const Modal = forwardRef<HTMLDivElement, ModalProps>(
 );
 
 Modal.displayName = "Modal";
-
