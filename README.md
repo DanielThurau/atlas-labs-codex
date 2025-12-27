@@ -10,26 +10,25 @@ This is a **personal craftsman repository**—a tidy workshop where design decis
 
 ## Using in Other Projects
 
-Install the codex directly from GitHub as a dependency:
+Install from npm:
 
 ```bash
-# Using npm
-npm install github:your-username/atlas-labs-codex
-
-# Using pnpm
-pnpm add github:your-username/atlas-labs-codex
+npm install @atlas-labs/design-codex
 ```
 
-Then import components and styles:
+Then import components, styles, and utilities:
 
 ```tsx
 // Import components
-import { Button, Card, Input, Badge } from 'design-codex/components/react';
+import { Button, Card, Input, Badge, RefreshButton } from '@atlas-labs/design-codex';
 
-// Import CSS (in your app's entry point)
-import 'design-codex/themes/css/base.css';
-import 'design-codex/themes/css/theme-light.css';
-import 'design-codex/themes/css/theme-dark.css';
+// Import utilities
+import { formatRelativeTime, clsx } from '@atlas-labs/design-codex/lib';
+
+// Import CSS (in your layout.tsx or entry point)
+import '@atlas-labs/design-codex/themes/css/base.css';
+import '@atlas-labs/design-codex/themes/css/theme-light.css';
+import '@atlas-labs/design-codex/themes/css/theme-dark.css';
 ```
 
 ### Font Setup
@@ -87,8 +86,6 @@ npm run storybook
 │   ├── spacing.md      # Spacing scale
 │   ├── components.md   # Component guidelines
 │   └── patterns/       # UI pattern recipes
-├── tokens/             # Design tokens
-│   └── tokens.json     # Source of truth
 ├── themes/css/         # CSS custom properties
 │   ├── base.css        # Primitives & component tokens
 │   ├── theme-light.css # Light mode
@@ -100,7 +97,11 @@ npm run storybook
 │   ├── Badge/
 │   ├── Modal/
 │   ├── Toast/
-│   └── Tabs/
+│   ├── Tabs/
+│   └── RefreshButton/  # AWS-style auto-refresh button
+├── lib/                # Shared utilities
+│   ├── index.ts        # Exports all utilities
+│   └── utils.ts        # formatRelativeTime, clsx
 ├── app/                # Next.js playground
 ├── public/fonts/       # Martian Mono font files
 └── .storybook/         # Storybook configuration
@@ -108,13 +109,11 @@ npm run storybook
 
 ## Design Tokens
 
-All visual values are defined as tokens in `tokens/tokens.json`. These tokens are transformed into CSS custom properties for use across the codebase.
-
-### Token Layers
+All visual values are defined as CSS custom properties in `themes/css/`. The token architecture follows three layers:
 
 1. **Primitive tokens** — Raw values (colors, spacing units)
-2. **Semantic tokens** — Meaningful mappings (`color.text.primary`)
-3. **Component tokens** — Optional component-specific overrides
+2. **Semantic tokens** — Meaningful mappings (`--color-text-primary`)
+3. **Component tokens** — Component-specific overrides (`--button-radius`)
 
 ## Themes
 

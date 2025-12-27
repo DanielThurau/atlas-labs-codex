@@ -33,6 +33,14 @@
   --color-intent-danger-hover: var(--color-rose-700);
   --color-intent-danger-bg: #fff1f2;
 
+  /* Status Colors - Semantic aliases for status indicators */
+  --color-success-default: var(--color-emerald-500);
+  --color-success-subtle: #ecfdf5;
+  --color-error-default: var(--color-rose-500);
+  --color-error-subtle: #fff1f2;
+  --color-warning-default: var(--color-amber-500);
+  --color-warning-subtle: #fffbeb;
+
   /* Focus Ring */
   --focus-ring: 0 0 0 2px var(--color-bg-surface), 0 0 0 4px var(--color-intent-primary);
 

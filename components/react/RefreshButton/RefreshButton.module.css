@@ -1,0 +1,202 @@
+.container {
+  position: relative;
+  display: inline-flex;
+  flex-direction: column;
+}
+
+.buttonGroup {
+  display: flex;
+  position: relative;
+  flex-direction: column;
+}
+
+.buttons {
+  display: flex;
+}
+
+/* Main refresh button */
+.refreshButton {
+  display: flex;
+  align-items: center;
+  gap: var(--space-2);
+  padding: var(--space-2) var(--space-3);
+  background: var(--color-bg-subtle);
+  border: 1px solid var(--color-border-default);
+  border-right: none;
+  border-radius: var(--radius-md) 0 0 var(--radius-md);
+  font-family: inherit;
+  font-size: var(--text-sm);
+  color: var(--color-text-primary);
+  cursor: pointer;
+  transition: background 150ms, color 150ms;
+}
+
+/* When progress bar is shown, remove bottom radius */
+.buttonGroup[data-has-progress="true"] .refreshButton {
+  border-radius: var(--radius-md) 0 0 0;
+}
+
+.refreshButton:hover:not(:disabled) {
+  background: var(--color-bg-muted);
+}
+
+.refreshButton:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+.icon {
+  display: inline-block;
+  font-size: var(--text-base);
+}
+
+.spinning {
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
+
+/* Dropdown trigger */
+.dropdownTrigger {
+  display: flex;
+  align-items: center;
+  gap: var(--space-1);
+  padding: var(--space-2) var(--space-2);
+  background: var(--color-bg-subtle);
+  border: 1px solid var(--color-border-default);
+  border-radius: 0 var(--radius-md) var(--radius-md) 0;
+  font-family: inherit;
+  font-size: var(--text-xs);
+  color: var(--color-text-secondary);
+  cursor: pointer;
+  transition: background 150ms;
+  min-width: 60px;
+  justify-content: center;
+}
+
+/* When progress bar is shown, remove bottom radius */
+.buttonGroup[data-has-progress="true"] .dropdownTrigger {
+  border-radius: 0 var(--radius-md) 0 0;
+}
+
+.dropdownTrigger:hover:not(:disabled) {
+  background: var(--color-bg-muted);
+}
+
+.dropdownTrigger:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+.intervalLabel {
+  font-weight: var(--font-medium);
+}
+
+.chevron {
+  font-size: 8px;
+  color: var(--color-text-muted);
+}
+
+/* Progress bar */
+.progressBar {
+  width: 100%;
+  height: 6px;
+  background: var(--color-bg-muted);
+  border-radius: 0 0 var(--radius-sm) var(--radius-sm);
+  overflow: hidden;
+  border: 1px solid var(--color-border-default);
+  border-top: none;
+}
+
+.progressFill {
+  height: 100%;
+  background: linear-gradient(90deg, var(--color-intent-primary), var(--color-indigo-400));
+  transition: width 100ms linear;
+  min-width: 2px; /* Ensure always visible */
+}
+
+/* Dropdown menu */
+.dropdown {
+  position: absolute;
+  top: calc(100% + var(--space-1));
+  right: 0;
+  min-width: 120px;
+  background: var(--color-bg-elevated);
+  border: 1px solid var(--color-border-default);
+  border-radius: var(--radius-md);
+  box-shadow: var(--shadow-lg);
+  z-index: 100;
+  overflow: hidden;
+}
+
+.dropdownItem {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  padding: var(--space-2) var(--space-3);
+  background: transparent;
+  border: none;
+  font-family: inherit;
+  font-size: var(--text-sm);
+  color: var(--color-text-primary);
+  cursor: pointer;
+  transition: background 150ms;
+  text-align: left;
+}
+
+.dropdownItem:hover {
+  background: var(--color-bg-subtle);
+}
+
+.dropdownItem.selected {
+  background: var(--color-intent-primary-bg);
+  color: var(--color-intent-primary);
+}
+
+.checkmark {
+  font-size: var(--text-xs);
+  color: var(--color-intent-primary);
+}
+
+/* Dropdown divider */
+.dropdownDivider {
+  height: 1px;
+  background: var(--color-border-default);
+  margin: var(--space-1) 0;
+}
+
+/* Check Now button in dropdown */
+.checkNow {
+  color: var(--color-text-secondary);
+  font-weight: var(--font-medium);
+}
+
+.checkNow:hover {
+  background: var(--color-bg-muted);
+  color: var(--color-text-primary);
+}
+
+.checkNow:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+/* Responsive */
+@media (max-width: 640px) {
+  .refreshButton span:not(.icon) {
+    display: none;
+  }
+  
+  .refreshButton {
+    padding: var(--space-2);
+  }
+  
+  .dropdownTrigger {
+    min-width: 50px;
+  }
+}
+

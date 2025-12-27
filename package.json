@@ -1,7 +1,49 @@
 {
-  "name": "design-codex",
+  "name": "@atlas-labs/design-codex",
   "version": "0.1.0",
-  "private": true,
+  "description": "Personal design system with React components, CSS tokens, and utilities",
+  "author": "thurau",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/thurau/atlas-labs-codex"
+  },
+  "keywords": [
+    "design-system",
+    "react",
+    "components",
+    "css-variables",
+    "design-tokens"
+  ],
+  "type": "module",
+  "main": "./components/react/index.ts",
+  "types": "./components/react/index.ts",
+  "exports": {
+    ".": {
+      "import": "./components/react/index.ts",
+      "types": "./components/react/index.ts"
+    },
+    "./components/react": {
+      "import": "./components/react/index.ts",
+      "types": "./components/react/index.ts"
+    },
+    "./lib": {
+      "import": "./lib/index.ts",
+      "types": "./lib/index.ts"
+    },
+    "./themes/css/base.css": "./themes/css/base.css",
+    "./themes/css/theme-light.css": "./themes/css/theme-light.css",
+    "./themes/css/theme-dark.css": "./themes/css/theme-dark.css"
+  },
+  "files": [
+    "components",
+    "lib",
+    "themes",
+    "public/fonts"
+  ],
+  "sideEffects": [
+    "**/*.css"
+  ],
   "engines": {
     "node": ">=18.0.0"
   },
@@ -12,7 +54,11 @@
     "lint": "next lint",
     "storybook": "storybook dev -p 6006",
     "build-storybook": "storybook build",
-    "build-tokens": "node scripts/build-tokens.js"
+    "prepublishOnly": "echo 'Ready to publish!'"
+  },
+  "peerDependencies": {
+    "react": "^18.0.0",
+    "react-dom": "^18.0.0"
   },
   "dependencies": {
     "@radix-ui/react-dialog": "^1.1.2",
@@ -22,10 +68,7 @@
     "@radix-ui/react-toast": "^1.2.2",
     "@radix-ui/react-slot": "^1.1.0",
     "class-variance-authority": "^0.7.0",
-    "clsx": "^2.1.1",
-    "next": "14.2.15",
-    "react": "^18.3.1",
-    "react-dom": "^18.3.1"
+    "clsx": "^2.1.1"
   },
   "devDependencies": {
     "@storybook/addon-essentials": "^8.4.7",
@@ -42,9 +85,11 @@
     "@vitejs/plugin-react": "^4.3.0",
     "eslint": "^8.57.0",
     "eslint-config-next": "14.2.15",
+    "next": "14.2.15",
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1",
     "storybook": "^8.4.7",
     "typescript": "^5.7.2",
     "vite": "^5.4.0"
   }
 }
-

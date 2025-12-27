@@ -26,3 +26,6 @@ export {
 // Navigation Components
 export { Tabs, type TabsProps, type TabItem } from "./Tabs";
 
+// Action Components
+export { RefreshButton } from "./RefreshButton";
+

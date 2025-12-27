@@ -1,0 +1,27 @@
+# Development only
+.storybook/
+storybook-static/
+app/
+codex/
+references/
+.next/
+node_modules/
+
+# Config files
+*.config.js
+*.config.ts
+*.config.mjs
+tsconfig.json
+.eslintrc*
+.gitignore
+
+# Build artifacts
+*.log
+.DS_Store
+
+# Keep these (explicitly)
+!components/
+!lib/
+!themes/
+!public/fonts/
+
