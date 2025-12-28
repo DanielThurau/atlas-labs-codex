@@ -1,6 +1,6 @@
 {
   "name": "@danielthurau/atlas-labs-codex",
-  "version": "0.2.0",
+  "version": "0.2.1",
   "description": "Personal design system with React components, CSS tokens, and utilities",
   "author": "thurau",
   "license": "MIT",
